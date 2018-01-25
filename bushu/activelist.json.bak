@@ -1,0 +1,68 @@
+{
+	"code": "0000",
+	"msg": "",
+	"inner_games": [{
+		"game_id": "347dacc981634ff8a226d18762b32ece",
+		"name": "英雄联盟",
+		"price": "$200",
+		"url": "https://yxlm.com/down",
+		"interrupt": "1",
+		"install": "200000",
+		"rating_value": "8.0",
+		"resources": [{
+			"resource_id": "4c04aef92dd0468282831ce4ac9f0aaa",
+			"resource_type": "4",
+			"name": "英雄联盟mp4",
+			"size": "10.32MB",
+			"md5": "6bd07c0329ce4e4f99faa33d4d9ad222",
+			"url": "https://yxlm.com/resource4"
+		}, {
+			"resource_id": "4c04aef92dd0468282831ce4ac9f0133",
+			"resource_type": "0",
+			"name": "英雄联盟ico",
+			"size": "101.00KB",
+			"md5": "6bd07c0329ce4e4f99faa33d4d9ad570",
+			"url": "https://yxlm.com/resource1"
+		}]
+	}, {
+		"game_id": "347dacc981634ff8a226d18762b32xxx",
+		"name": "王者荣耀",
+		"price": "$300",
+		"url": "https://wzry.com/down",
+		"interrupt": "0",
+		"install": "100000",
+		"rating_value": "9.0",
+		"resources": [{
+			"resource_id": "4c04aef92dd0468282831ce4ac9f0xxx",
+			"resource_type": "0",
+			"name": "王者荣耀ico",
+			"size": "100.00KB",
+			"md5": "6bd07c0329ce4e4f99faa33d4d9ad570",
+			"url": "https://wzry.com/resource1"
+		}, {
+			"resource_id": "4c04aef92dd0468282831ce4ac9f0sss",
+			"resource_type": "4",
+			"name": "王者荣耀mp4",
+			"size": "5.32MB",
+			"md5": "6bd07c0329ce4e4f99faa33d4d9adxxx",
+			"url": "https://wzry.com/resource4"
+		}]
+	}],
+	"ext_games": [{
+		"game_id": "347dacc981634ff8a226d18762b32ddd",
+		"name": "dota",
+		"price": "$10",
+		"url": "https://dota.com/down",
+		"interrupt": "1",
+		"install": "2000",
+		"rating_value": "8.0",
+		"resources": [{
+			"resource_id": "4c04aef92dd0468282831ce4ac9f0133",
+			"resource_type": "0",
+			"name": "dotaico",
+			"size": "101.00KB",
+			"md5": "6bd07c0329ce4e4f99faa33d4d9adzzz",
+			"url": "https://dota.com/resource1"
+		}]
+	}]
+}
