@@ -1,0 +1,12 @@
+FROM xujian:server
+RUN mkdir -p /opt
+RUN mkdir -p /www
+ADD docker_init.sh /opt/
+ADD web.py /opt/
+ADD activelist.json /opt/
+ADD inactivelist.json /opt/
+ADD check_nginx.sh /etc/keepalived/
+ADD nginx1/keepalived/keepalived.conf /etc/keepalived/
+ADD nginx1/conf/nginx.conf.1 /etc/nginx/nginx.conf
+ADD nginx1/www/index.html /www
+CMD ["/bin/bash","-c","/opt/docker_init.sh"]

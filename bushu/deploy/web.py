@@ -102,7 +102,7 @@ class ActiveListHandler(tornado.web.RequestHandler):
                             if len(resource_type) == 0:
                                 code = '2002'
                             else:
-                                with open('./activelist.json','r') as fp:
+                                with open('/opt/activelist.json','r') as fp:
                                     webdata = json.load(fp, encoding="utf-8")
                                 result['inner_games'] = webdata['inner_games']
                         else:
@@ -112,7 +112,7 @@ class ActiveListHandler(tornado.web.RequestHandler):
 	except Exception as e:
                 code = "0008"
 		logger.error('error :%s',str(e))
-                with open('./activelist.json','r') as fp:
+                with open('/opt/activelist.json','r') as fp:
                     webdata = json.load(fp, encoding="utf-8")
                 result['inner_games'] = webdata['inner_games']
 
@@ -154,7 +154,7 @@ class InActiveListHandler(tornado.web.RequestHandler):
                                 if len(resource_type) == 0:
                                     code = '2002'
                                 else:
-                                    with open('./inactivelist.json','r') as fp:
+                                    with open('/opt/inactivelist.json','r') as fp:
                                         webdata = json.load(fp, encoding="utf-8")
                                     result['games'] = webdata['games']
                             else:
@@ -166,7 +166,7 @@ class InActiveListHandler(tornado.web.RequestHandler):
 	except Exception as e:
                 code = "0008"
 		logger.error('error :%s',str(e))
-                with open('./inactivelist.json','r') as fp:
+                with open('/opt/inactivelist.json','r') as fp:
                     webdata = json.load(fp, encoding="utf-8")
                 result['games'] = webdata['games']
 
