@@ -39,6 +39,7 @@ msg = {
         '0009':'Unsupport params.',
         '2001':'The identifier does not exist.',
         '2002':'The resource type is not specified.'
+        '2003':'Page is not specified.'
         }
 
 class ExampleHandler(tornado.web.RequestHandler):
@@ -144,15 +145,17 @@ class InActiveListHandler(tornado.web.RequestHandler):
                     logger.info('datajson bundle:%s',datajson['bundle'])
 
                     if 'bundle' in datajson:
-                        if datajson['bundle'] == 'com.yq.dota':
+                        if 'page' in datajosn and datajson['bundle'] == 'com.yq.dota' and int(data['page']) >= 0:
                             code = '0000'
                             resource_type = datajson['resource_type']
                             if len(resource_type) == 0:
                                 code = '2002'
                             else:
-                                with open('./activelist.json','r') as fp:
+                                with open('./inactivelist.json','r') as fp:
                                     webdata = json.load(fp, encoding="utf-8")
-                                result['inner_games'] = webdata['inner_games']
+                                result['games'] = webdata['games']
+                        elif 'page' not in datajosn:
+                            code = '2003'
                         else:
                             code = '2001'
                     else:
@@ -160,9 +163,9 @@ class InActiveListHandler(tornado.web.RequestHandler):
 	except Exception as e:
                 code = "0008"
 		logger.error('error :%s',str(e))
-                with open('./activelist.json','r') as fp:
+                with open('./inactivelist.json','r') as fp:
                     webdata = json.load(fp, encoding="utf-8")
-                result['inner_games'] = webdata['inner_games']
+                result['games'] = webdata['games']
 
         result['code'] = code
         result['msg'] = msg[code]
